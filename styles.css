@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Righteous&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Righteous&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Domine', serif;
+  font-family: "Domine", serif;
   line-height: 1.6;
   height: 100vh;
   overflow: hidden;
@@ -25,6 +25,35 @@ body {
   justify-content: space-between;
 }
 .portal-header h1 {
-    font-family: "Righteous", sans-serif;
+  font-family: "Righteous", sans-serif;
   align-self: center;
+}
+
+/* Main Container */
+.container {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 60px);
+  margin-top: 60px;
+}
+
+/* Left Column */
+.left-column {
+  width: 30%;
+  min-width: 300px;
+  border-right: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  background-color: #ede4e4;
+}
+
+/* Right cloumn */
+
+.right-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
