@@ -47,6 +47,34 @@ body {
   background-color: #ede4e4;
 }
 
+/* Left Column Header */
+.search-section {
+    background-color: white;
+    display: flex;
+    flex-direction: space-between;
+    padding: 1rem;
+    padding-right: 30%;
+    border-bottom: 1px solid #aba3a3;
+  }
+  
+  .new-question-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 50%;
+  }
+  
+  .search-input {
+    width: 50%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
 /* Right cloumn */
 
 .right-container {
@@ -57,3 +85,5 @@ body {
   width: 100%;
   height: 100%;
 }
+
+
