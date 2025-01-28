@@ -49,60 +49,60 @@ body {
 
 /* Left Column Header */
 .search-section {
-    background-color: white;
-    display: flex;
-    flex-direction: space-between;
-    padding: 1rem;
-    padding-right: 30%;
-    border-bottom: 1px solid #aba3a3;
-  }
-  
-  .new-question-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    margin-right: 0.5rem;
-    cursor: pointer;
-    border-radius: 4px;
-    width: 50%;
-  }
-  
-  .search-input {
-    width: 50%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
+  background-color: white;
+  display: flex;
+  flex-direction: space-between;
+  padding: 1rem;
+  padding-right: 30%;
+  border-bottom: 1px solid #aba3a3;
+}
+
+.new-question-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-right: 0.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 50%;
+}
+
+.search-input {
+  width: 50%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
 
 /* Left Column Body */
 .questions-list {
-    overflow-y: auto;
-    flex-grow: 1;
-  }
-  
-  .question-item {
-    padding: 1rem;
-    border-bottom: 1px solid #aba3a3;
-    cursor: pointer;
-  }
-  
-  .question-item:hover {
-    background-color: #b5cde5;
-  }
-  
-  .question-item.active {
-    background-color: #b5cde5;
-    color: rgb(0, 0, 0);
-  }
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.question-item {
+  padding: 1rem;
+  border-bottom: 1px solid #aba3a3;
+  cursor: pointer;
+}
+
+.question-item:hover {
+  background-color: #b5cde5;
+}
+
+.question-item.active {
+  background-color: #b5cde5;
+  color: rgb(0, 0, 0);
+}
 
 /* Right cloumn */
 .right-column {
-    flex-grow: 1;
-    padding: 1rem;
-    overflow-y: auto;
-    background-color: #fff;
-  }
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #fff;
+}
 
 /* right content  */
 .right-container {
@@ -116,58 +116,114 @@ body {
 
 /* hide content*/
 .hide {
-    display: none;
+  display: none;
 }
 
 /* Right new question form*/
 .question-form {
-    width: 90%;
-    margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .question-form h2 {
-    margin-bottom: 1rem;
-    color: #333;
+  margin-bottom: 1rem;
+  color: #333;
 }
 
 .question-form p {
-    margin-bottom: 2rem;
-    color: #666;
+  margin-bottom: 2rem;
+  color: #666;
 }
 
 .new-question-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .subject-input,
 .question-input {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
 }
 
 .question-input {
-    min-height: 200px;
-    resize: vertical;
+  min-height: 200px;
+  resize: vertical;
 }
 
 .submit-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 4px;
-    align-self: flex-end;
-    font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  align-self: flex-end;
+  font-size: 1rem;
 }
 
 .submit-btn:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
+/* Right question details */
+.question-section {
+  display: flex;
+  flex-direction: column;
+}
+.question-section,
+.response-section,
+.add-response{
+  width: 90%;
+  background-color: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.question-section h2, .response-section h2, .add-response h2 {
+    color: #5c5252;
+}
+
+.question-detail,
+.response-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 4px;
+}
+
+.response-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.name-input,
+.comment-input {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.comment-input {
+  min-height: 100px;
+  resize: vertical;
+}
+.resolve-btn {
+  margin-top: 0.5rem;
+}
+.submit-btn ,.resolve-btn{
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  align-self: flex-end;
+}
 

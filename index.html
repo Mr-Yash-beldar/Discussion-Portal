@@ -36,6 +36,7 @@
       <!-- Right Column -->
       <div class="right-column">
         <div class="right-container">
+            <!-- new question form -->
           <div class="question-form hide" id="question-form">
             <h2>Welcome to Discussion Portal !</h2>
             <p>Enter a subject and question to get started</p>
@@ -47,6 +48,45 @@
               ></textarea>
               <button type="submit" class="submit-btn">Submit</button>
             </form>
+          </div>
+
+            <!-- question details -->
+             <div id="content" class="hidden"> 
+            <div class="question-section">
+              <h2>Question</h2>
+              <div class="question-detail">
+                <h3>JSON & Web storage</h3>
+                <p>How to use Web Storage</p>
+              </div>
+              <button type="submit" class="resolve-btn">Resolve</button>
+            </div>
+
+            <div class="response-section">
+              <h2>Response</h2>
+              <div class="response-card">
+                <h4>Amit</h4>
+                <p>
+                  Local storage can only save strings, so storing objects
+                  requires that they be turned into strings using JSON.
+                </p>
+              </div>
+            </div>
+
+            <div class="add-response">
+              <h2>Add Response</h2>
+              <form class="response-form">
+                <input
+                  type="text"
+                  placeholder="Enter Name"
+                  class="name-input"
+                />
+                <textarea
+                  placeholder="Enter Comment"
+                  class="comment-input"
+                ></textarea>
+                <button type="submit" class="submit-btn">Submit</button>
+              </form>
+            </div>
           </div>
         </div>
       </div>
