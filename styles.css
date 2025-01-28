@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Righteous&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Domine', serif;
+  line-height: 1.6;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Header Styles */
+.portal-header {
+  background-color: #008080;
+  color: white;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.portal-header h1 {
+    font-family: "Righteous", sans-serif;
+  align-self: center;
+}
