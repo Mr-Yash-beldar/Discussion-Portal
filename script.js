@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const responseSection = document.querySelector(".response-section");
   const leftColumn = document.querySelector(".left-column");
   const rightColumn = document.querySelector(".right-container");
+  const toggleBtn = document.getElementById("toggle-btn");
+
+  toggleBtn.addEventListener("click", function () {
+    leftColumn.classList.toggle("active");
+  });
 
   let questions = JSON.parse(localStorage.getItem("questions")) || [];
   function saveToLocalStorage() {

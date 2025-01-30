@@ -29,6 +29,16 @@ body {
   align-self: center;
 }
 
+/* Toggle Button */
+.toggle-btn {
+  display: none; /* Hide by default */
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /* Main Container */
 .container {
   display: flex;
@@ -285,6 +295,47 @@ marking {
 .question-header {
   display: flex;
   flex-direction: column;
-
   width: 100%;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left-column {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+    display: none; /* Hide by default on small screens */
+  }
+
+  .left-column.active {
+    display: flex; /* Show when active */
+  }
+
+  .right-column {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .toggle-btn {
+    display: block; /* Show toggle button on small screens */
+  }
+
+  .search-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .new-question-btn {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .search-input {
+    width: 100%;
+    margin-right: 0;
+  }
 }
