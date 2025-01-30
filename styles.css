@@ -51,28 +51,38 @@ body {
 .search-section {
   background-color: white;
   display: flex;
-  flex-direction: space-between;
+  flex-direction: row;
   padding: 1rem;
-  padding-right: 30%;
   border-bottom: 1px solid #aba3a3;
 }
-
+.stared-questions span {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 .new-question-btn {
   background-color: #007bff;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
-  margin-right: 0.5rem;
+  margin-right: 13px;
+  padding: 0.5rem;
   cursor: pointer;
   border-radius: 4px;
-  width: 50%;
+  width: 35%;
 }
 
 .search-input {
-  width: 50%;
+  margin-right: 60px;
+  width: 40%;
   padding: 0.5rem;
   border: 1px solid #ddd;
   border-radius: 4px;
+}
+.search-input:focus {
+  outline: none;
+  border: 2px solid #007bff;
 }
 
 /* Left Column Body */
@@ -116,7 +126,7 @@ body {
 
 /* hide content*/
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* Right new question form*/
@@ -175,20 +185,22 @@ body {
   display: flex;
   flex-direction: column;
 }
-#content{
+#content {
   width: 90%;
 }
 .question-section,
 .response-section,
-.add-response{
+.add-response {
   width: 90%;
   background-color: #fff;
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 4px;
 }
-.question-section h2, .response-section h2, .add-response h2 {
-    color: #5c5252;
+.question-section h2,
+.response-section h2,
+.add-response h2 {
+  color: #5c5252;
 }
 
 .question-detail,
@@ -198,7 +210,30 @@ body {
   margin-top: 1rem;
   border-radius: 4px;
 }
+.response-card {
+  display: flex;
+  flex-direction: column;
+}
+.reactionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  align-self: flex-end;
+}
 
+.reactionBtn .up-btn
+.reactionBtn .down-btn, .reactionBtn .delete-btn {
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  width: 25%;
+  display: flex;
+  justify-content: space-between;
+  font-size: large;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
 .response-form {
   display: flex;
   flex-direction: column;
@@ -220,7 +255,8 @@ body {
 .resolve-btn {
   margin-top: 0.5rem;
 }
-.submit-btn ,.resolve-btn{
+.submit-btn,
+.resolve-btn {
   background-color: #007bff;
   color: white;
   border: none;
@@ -231,6 +267,24 @@ body {
 }
 
 /* Highligher */
-marking{
+marking {
   background-color: yellow;
+}
+
+.question-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #aba3a3;
+  cursor: pointer;
+  position: relative;
+}
+
+.question-header {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
 }
