@@ -129,6 +129,51 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+ // Search functionality
+ leftColumn.addEventListener("input", function (e) {
+  const query = e.target.value.toLowerCase().trim();
+  const items = document.querySelectorAll(".question-item");
+  let matchFound = false;
+
+  items.forEach((item) => {
+      const h3 = item.querySelector("h3");
+      const p = item.querySelector("p");
+
+      if (!h3.dataset.originalText) h3.dataset.originalText = h3.textContent;
+      if (!p.dataset.originalText) p.dataset.originalText = p.textContent;
+
+      if (!query) {
+          h3.innerHTML = h3.dataset.originalText;
+          p.innerHTML = p.dataset.originalText;
+          item.classList.remove("hidden");
+          matchFound = true;
+          return;
+      }
+
+      const h3Match = highlightMatches(h3, query);
+      const pMatch = highlightMatches(p, query);
+
+      if (h3Match || pMatch) {
+          matchFound = true;
+          item.classList.remove("hidden"); 
+      } else {
+          item.classList.add("hidden");
+      }
+  });
+
+  let noMatchMessage = document.getElementById("no-match-message");
+  if (!matchFound) {
+      if (!noMatchMessage) {
+          noMatchMessage = document.createElement("div");
+          noMatchMessage.id = "no-match-message";
+          noMatchMessage.textContent = "No match found";
+          noMatchMessage.style.color = "red";
+          document.querySelector(".questions-list").appendChild(noMatchMessage);
+      }
+  } else if (noMatchMessage) {
+      noMatchMessage.remove();
+  }
+});
 
 function highlightMatches(element, query) {
   const originalText = element.dataset.originalText;
