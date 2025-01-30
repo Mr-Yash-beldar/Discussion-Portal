@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".question-detail p").textContent =
       question.question;
 
-    responseSection.innerHTML = `<h2>Response</h2>`;
+    responseSection.innerHTML = "";
     question.responses.forEach((res) => {
       responseCard = createResponseCard(res);
       responseSection.appendChild(responseCard);
