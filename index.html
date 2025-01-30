@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Discussion Portal</title>
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
   <body>
     <header class="portal-header">
@@ -20,45 +24,64 @@
             placeholder="search questions.."
             class="search-input"
           />
+          <div class="stared-questions">
+            <span class="star-icon"
+              ><i class="fa fa-star fa-2x" id="stared-question" aria-hidden="true"></i
+            ></span>
+          </div>
         </div>
 
         <div class="questions-list">
           <div class="question-item active">
-            <h3>JSON & Web storage</h3>
-            <p>How to use Web Storage</p>
+            <div class="question-header">
+              <h3>JSON & Web storage</h3>
+              <p>How to use Web Storage</p>
+            </div>
+
+            <span class="star-icon"
+              ><i class="fa fa-star-o fa-2x" aria-hidden="true"></i
+            ></span>
           </div>
           <div class="question-item">
-            <h3>Yashodip Beldar</h3>
-            <p>I am very talented</p>
+            <div class="question-header">
+              <h3>JSON & Web storage</h3>
+              <p>How to use Web Storage</p>
+            </div>
+
+            <span class="star-icon"
+              ><i class="fa fa-star-o fa-2x" aria-hidden="true"></i
+            ></span>
           </div>
         </div>
       </div>
       <!-- Right Column -->
       <div class="right-column">
         <div class="right-container">
-            <!-- new question form -->
+          <!-- new question form -->
           <div class="question-form" id="question-form">
             <h2>Welcome to Discussion Portal !</h2>
             <p>Enter a subject and question to get started</p>
-            <form class="new-question-form">
+            <form class="new-question-form" onsubmit="return false">
               <input type="text" placeholder="Subject" class="subject-input" />
               <textarea
                 placeholder="Question"
                 class="question-input"
               ></textarea>
-              <button type="submit" class="submit-btn">Submit</button>
+              <button type="submit" class="submit-btn" name="addNewQuestion">
+                Submit
+              </button>
             </form>
           </div>
 
-            <!-- question details -->
-             <div id="content" class="hidden"> 
+          <!-- question details -->
+          <div id="content" class="hidden">
             <div class="question-section">
               <h2>Question</h2>
               <div class="question-detail">
                 <h3>JSON & Web storage</h3>
                 <p>How to use Web Storage</p>
               </div>
-              <button type="submit" class="resolve-btn">Resolve</button>
+              <button type="submit" class="resolve-btn" name="resolve">Resolve</button>
             </div>
 
             <div class="response-section">
@@ -69,12 +92,16 @@
                   Local storage can only save strings, so storing objects
                   requires that they be turned into strings using JSON.
                 </p>
+                <div class="reactionBtn">
+                  <button class="like-btn">👍 11</button>
+                  <button class="dislike-btn">👎 22</button>
+                </div>
               </div>
             </div>
 
             <div class="add-response">
               <h2>Add Response</h2>
-              <form class="response-form">
+              <form class="response-form" onsubmit="return false">
                 <input
                   type="text"
                   placeholder="Enter Name"
@@ -84,7 +111,7 @@
                   placeholder="Enter Comment"
                   class="comment-input"
                 ></textarea>
-                <button type="submit" class="submit-btn">Submit</button>
+                <button type="submit" name="addResponse" class="submit-btn">Submit</button>
               </form>
             </div>
           </div>
